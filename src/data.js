@@ -1,21 +1,21 @@
 export const sliderItems=[
     {
         id:1,
-        img:'https://www.tiktok.com/api/img/?itemId=7006741406014295298&location=0&aid=1988',
+        img:'https://images.unsplash.com/photo-1620001796685-adf7110fe1a7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=928&q=80',
         title:'SUMMER SALE',
         desc:"DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
         bg:'f5fafd'
     },
     {
         id:2,
-        img:'https://www.tiktok.com/api/img/?itemId=6919169061368679682&location=0&aid=1988',
+        img:'https://images.unsplash.com/photo-1477973770766-6228305816df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1469&q=80',
         title:'AUTUMN COLLECTION',
         desc:"DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
         bg:'fcf1ed'
     },
     {
         id:3,
-        img:'https://www.tiktok.com/api/img/?itemId=7010813160575880450&location=0&aid=1988',
+        img:'https://images.unsplash.com/photo-1600369671738-fa3a43efeced?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=928&q=80',
         title:'POPULAR SALE',
         desc:"DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
         bg:'fbf0f4'

@@ -1,3 +1,4 @@
+import { useHistory } from 'react-router'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -37,12 +38,13 @@ font-weight: 600;
 `
 
 const CategoryItem = ({item}) => {
+    const history =useHistory()
     return (
         <Container>
             <Image src={item.img}/>
             <Info>
                 <Title>{item.title}</Title>
-                <Button>SHOP NOW</Button>
+                <Button onClick={()=>history.push("/ProductsList")}>SHOP NOW</Button>
             </Info>
         </Container>
     )

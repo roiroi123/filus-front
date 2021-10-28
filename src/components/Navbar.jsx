@@ -1,6 +1,7 @@
 import { Badge } from '@material-ui/core'
 import { Search, ShoppingCartOutlined } from '@material-ui/icons'
 import React from 'react'
+import { useHistory } from 'react-router'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -40,6 +41,7 @@ text-align: center;
 const Logo=styled.h1`
 font-weight: bold;
 text-align: center;
+cursor: pointer;
 `
 const Right= styled.div`
 flex:1;
@@ -54,6 +56,7 @@ cursor: pointer;
 margin-left: 25px;
 `
 const Navbar = () => {
+    const history =useHistory()
     return (
         <Container>
             <Wrapper>
@@ -67,12 +70,12 @@ const Navbar = () => {
                     </SearchConatiner>
                 </Left>
                 <Center>
-                <Logo>Filus.</Logo>
+                <Logo onClick={()=>history.push("/home")}>Filus.</Logo>
 
                 </Center>
                 <Right>
-                    <MenuItem>REGISTER</MenuItem>
-                    <MenuItem>SIGN IN</MenuItem>
+                    <MenuItem onClick={()=>history.push("/register")}>REGISTER</MenuItem>
+                    <MenuItem onClick={()=>history.push("/login")}>SIGN IN</MenuItem>
                     <MenuItem>
                     <Badge badgeContent={4} color="primary">
                         <ShoppingCartOutlined/>
