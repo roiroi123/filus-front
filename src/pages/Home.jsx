@@ -10,8 +10,8 @@ import Slider from '../components/Slider'
 const Home = () => {
     return (
         <div>
-            <Announcment/>
             <Navbar/>
+            <Announcment/>
             <Slider/>
             <Categories/>
             <Products />

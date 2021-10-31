@@ -4,7 +4,7 @@ import Product from "./pages/Product";
 import ProductList from "./pages/ProductList";
 import Register from "./pages/Register";
 import { BrowserRouter as Router, NavLink, Link } from "react-router-dom";
-import Routing from "./components/Routing";
+import Routing from "./pages/Routing";
 
 const App = () => {
   return (

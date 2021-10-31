@@ -3,6 +3,7 @@ import { Search, ShoppingCartOutlined } from '@material-ui/icons'
 import React from 'react'
 import { useHistory } from 'react-router'
 import styled from 'styled-components'
+import {mobile} from "../responsive"
 
 const Container = styled.div`
 height:60px;
@@ -77,7 +78,7 @@ const Navbar = () => {
                     <MenuItem onClick={()=>history.push("/register")}>REGISTER</MenuItem>
                     <MenuItem onClick={()=>history.push("/login")}>SIGN IN</MenuItem>
                     <MenuItem>
-                    <Badge badgeContent={4} color="primary">
+                    <Badge onClick={()=>history.push("/cart")} badgeContent={4} color="primary">
                         <ShoppingCartOutlined/>
                     </Badge>
                     </MenuItem>
