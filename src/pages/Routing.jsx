@@ -5,7 +5,7 @@ import Login from './Login'
 import Register from './Register'
 import Product from './Product'
 import ProductList from './ProductList'
-import Cart from '../components/Cart'
+import Cart from './Cart'
 
 const Routing = () => {
     return (
