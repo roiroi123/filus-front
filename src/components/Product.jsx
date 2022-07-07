@@ -4,6 +4,7 @@ import {
   ShoppingCartOutlined,
 } from "@material-ui/icons";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Info = styled.div`
@@ -69,7 +70,7 @@ const Icon = styled.div`
 const Product = ({ item }) => {
   const history =useHistory()
   return (
-    <Container onClick={()=>history.push("/product")}>
+    <Container >
       <Circle />
       <Image src={item.img} />
       <Info>
@@ -77,7 +78,9 @@ const Product = ({ item }) => {
           <ShoppingCartOutlined />
         </Icon>
         <Icon>
+          <Link to={`/product/${item._id}`} >
           <SearchOutlined />
+          </Link>
         </Icon>
         <Icon>
           <FavoriteBorderOutlined />

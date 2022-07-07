@@ -25,18 +25,21 @@ export const sliderItems=[
 export const categories = [
     {
         id:1,
-        img:"https://www.thesprucepets.com/thmb/AYrOH3UNNGqwwkcMOjE8BJdA9YA=/1854x1854/smart/filters:no_upscale()/pitbull-dog-breeds-4843994-hero-db6922b6c8294b45b19c07aff5865790.jpg",
-        title:"SHIRT STYLE!"
+        img:"https://images.pexels.com/photos/7210262/pexels-photo-7210262.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        title:"CHEWING TOYS",
+        cat:"chewing"
     },
     {
         id:2,
-        img:"https://www.petmd.com/sites/default/files/2020-11/picture-of-american-pitt-bull-terrier.jpg",
-        title:"SHIRT STYLE!"
+        img:"https://images.pexels.com/photos/5731892/pexels-photo-5731892.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        title:"BALLS",
+        cat:"ball"
     },
     {
         id:3,
-        img:"https://dogtime.com/assets/uploads/gallery/pit-bull-dog-breed-pictures/pit-bull-dog-breed-picture-1.jpg",
-        title:"SHIRT STYLE!"
+        img:"https://images.pexels.com/photos/3013467/pexels-photo-3013467.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        title:"TOYS",
+        cat:"toy"
     }
 ]
 export const popularProducts = [
@@ -67,9 +70,5 @@ export const popularProducts = [
     {
         id:7,
         img:"https://i.pinimg.com/564x/04/f0/80/04f080c825756ea7d5b31b1e8d85a8d2.jpg",
-    },
-    {
-        id:8,
-        img:"https://images.unsplash.com/photo-1627323721367-94128c3fa0f7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80",
-    },
+    }
 ]

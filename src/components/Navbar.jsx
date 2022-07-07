@@ -1,9 +1,11 @@
-import { Badge } from '@material-ui/core'
-import { Search, ShoppingCartOutlined } from '@material-ui/icons'
-import React from 'react'
-import { useHistory } from 'react-router'
-import styled from 'styled-components'
-import {mobile} from "../responsive"
+import { Badge } from "@material-ui/core";
+import { Search, ShoppingCartOutlined } from "@material-ui/icons";
+import React from "react";
+import { useSelector } from "react-redux";
+import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   height: 60px;
@@ -68,35 +70,39 @@ const MenuItem = styled.div`
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 const Navbar = () => {
-    const history =useHistory()
-    return (
-        <Container>
-            <Wrapper>
-                <Left>
-                    <Language>
-                        EN
-                    </Language>
-                    <SearchContainer>
-                        <Input/>
-                        <Search style={{color:'gray',fontSize:16}}/>
-                    </SearchContainer>
-                </Left>
-                <Center>
-                <Logo onClick={()=>history.push("/home")}>Filus.</Logo>
+  const history = useHistory();
+  const quantity = useSelector((state) => state.cart.quantity);
 
-                </Center>
-                <Right>
-                    <MenuItem onClick={()=>history.push("/register")}>REGISTER</MenuItem>
-                    <MenuItem onClick={()=>history.push("/login")}>SIGN IN</MenuItem>
-                    <MenuItem>
-                    <Badge onClick={()=>history.push("/cart")} badgeContent={4} color="primary">
-                        <ShoppingCartOutlined/>
-                    </Badge>
-                    </MenuItem>
-                </Right>
-            </Wrapper>
-        </Container>
-    )
-}
+  console.log(quantity);
+  return (
+    <Container>
+      <Wrapper>
+        <Left>
+          <Language>EN</Language>
+          <SearchContainer>
+            <Input />
+            <Search style={{ color: "gray", fontSize: 16 }} />
+          </SearchContainer>
+        </Left>
+        <Center>
+          <Logo onClick={() => history.push("/")}>Filus.</Logo>
+        </Center>
+        <Right>
+          <MenuItem onClick={() => history.push("/register")}>
+            REGISTER
+          </MenuItem>
 
-export default Navbar
+          <MenuItem onClick={() => history.push("/login")}>SIGN IN</MenuItem>
+
+          <MenuItem onClick={() => history.push("/cart")}>
+            <Badge badgeContent={quantity} color="primary">
+              <ShoppingCartOutlined />
+            </Badge>
+          </MenuItem>
+        </Right>
+      </Wrapper>
+    </Container>
+  );
+};
+
+export default Navbar;

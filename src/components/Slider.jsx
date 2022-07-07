@@ -49,9 +49,14 @@ const Slide = styled.div`
 const ImageContainer = styled.div`
   height: 100%;
   flex: 1;
+  
+  
 `;
 const Image = styled.img`
-  height: 80%;
+  height: 100%;
+  @media only screen and (max-width: 1200px) {
+  width:100%;
+}
 `;
 const InfoContainer = styled.div`
   flex: 1;

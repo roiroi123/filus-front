@@ -1,4 +1,5 @@
 import { useHistory } from 'react-router'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import { mobile } from "../responsive";
 
@@ -38,17 +39,25 @@ background-color: white;
 color: gray;
 cursor: pointer;
 font-weight: 600;
+transition: transform .2s; /* Animation */
+
+&:hover{
+    transform: scale(1.1);
+}
 `
 
 const CategoryItem = ({item}) => {
     const history =useHistory()
     return (
         <Container>
+            <Link to={`/products/${item.cat}`}>
             <Image src={item.img}/>
             <Info>
                 <Title>{item.title}</Title>
-                <Button onClick={()=>history.push("/ProductsList")}>SHOP NOW</Button>
+                <Button >SHOP NOW</Button>
             </Info>
+            </Link>
+
         </Container>
     )
 }
