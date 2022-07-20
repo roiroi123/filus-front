@@ -6,10 +6,13 @@ import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import img from '../assets/images/Logo.png'
 
 const Container = styled.div`
-  height: 60px;
-  ${mobile({ height: "50px" })}
+  height: 115px;
+  ${mobile({ height: "80px" })};
+  overflow:hidden;
+  
 `;
 
 const Wrapper = styled.div`
@@ -50,11 +53,16 @@ const Center = styled.div`
   text-align: center;
 `;
 
-const Logo = styled.h1`
-  font-weight: bold;
+const Logo = styled.div`
+  height:100px;
   cursor: pointer;
-  ${mobile({ fontSize: "24px" })}
 `;
+const Img = styled.img`
+  height: 100px ;
+  width: 25rem ;
+  ${mobile({height:"65px",width:"auto",marginLeft:"40px"})}
+
+`
 const Right = styled.div`
   flex: 1;
   display: flex;
@@ -80,20 +88,17 @@ const Navbar = () => {
         <Left>
           <Language>EN</Language>
           <SearchContainer>
-            <Input />
-            <Search style={{ color: "gray", fontSize: 16 }} />
+          <Input />
+          <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
         </Left>
         <Center>
-          <Logo onClick={() => history.push("/")}>Filus.</Logo>
+          <Logo onClick={() => history.push("/")}>
+        <Img src={img} />
+          </Logo>
         </Center>
         <Right>
-          <MenuItem onClick={() => history.push("/register")}>
-            REGISTER
-          </MenuItem>
-
-          <MenuItem onClick={() => history.push("/login")}>SIGN IN</MenuItem>
-
+         
           <MenuItem onClick={() => history.push("/cart")}>
             <Badge badgeContent={quantity} color="primary">
               <ShoppingCartOutlined />

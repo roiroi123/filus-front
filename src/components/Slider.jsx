@@ -63,17 +63,22 @@ const InfoContainer = styled.div`
   padding: 50px;
 `;
 const Title = styled.h1`
-  font-size: 70px;
+font-family: 'Amatic SC', cursive;
+  font-size: 90px;
 `;
 const Desc = styled.p`
+font-family: 'Karantina', cursive;
+
   margin: 50px 0px;
-  font-size: 20px;
+  font-size: 50px;
   font-weight: 500;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 `;
 const Button = styled.button`
+font-family: 'Open Sans', sans-serif;
   padding: 10px;
-  font-size: 20px;
+  font-size: 25px;
+  font-weight:700 ;
   background-color: transparent;
   cursor: pointer;
 `;
@@ -90,6 +95,7 @@ const Slider = () => {
         }
 
     }
+   
  
   return (
     <Container >
@@ -107,7 +113,7 @@ const Slider = () => {
             <Desc>
             {item.desc}
             </Desc>
-            <Button>SHOP NOW</Button>
+            <Button>לחצו כאן</Button>
           </InfoContainer>
         </Slide>
 
